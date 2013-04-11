@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jqTextLinks example</title>
+    <title>jqScroll example</title>
+    <style type="text/css">
+        .add_scroll_here {
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="src/jqScroll.css" />
 </head>
 <body>
-    <div id="koko">
-        <p>http://www.w3cscools.com fdsfs <a href="http://www.w3cscools.com">http://www.w3cscools.com</a></p>
-        <p>http://f.cl.ly/items/2h1X2G3G2F0Y3M2X3B0T/FHOqQjHYGZ4.jpeg</p>
-        <p>a couple of text before http://www.youtube.com/watch?v=7v9ItSEk24Y and a little after</p>
-        <p>a couple of text before http://cs419820.vk.me/v419820337/36f0/wcycXsng1-E.jpg and a little after</p>
-        <script type="text/javascript">
-            // http://www.nival.com
-        </script>
+    <div class="add_scroll_here">
+        Copyright 2013 for plugin contributors
+
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+        LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </div>
-    <a id="replace" href="#">replace links</a>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="src/jqTextLinks.js"></script>
-    <script type="text/javascript" src="src/jqTextLinks/jqtlImages.js"></script>
-    <script type="text/javascript" src="src/jqTextLinks/jqtlYoutube.js"></script>
+    <script type="text/javascript" src="src/jqScroll.js"></script>
     <script type="text/javascript">
-    	$('#replace').on('click', function (e) {
-	        $('#koko').jqTextLinks();
-	        e.preventDefault();
-	    }
+        $(".add_scroll_here").jqScroll();
     </script>
 </body>
 </html>
