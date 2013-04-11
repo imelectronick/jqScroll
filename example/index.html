@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>jqScroll example</title>
-    <link rel="stylesheet" src="src/jqScroll.css" />
-    <style>
+    <style type="text/css">
         .add_scroll_here {
-            max-width: 300px;
-            max-height: 300px;
-            overflow: scroll;
+            width: 300px;
+            height: 300px;
+            overflow: auto;
         }
     </style>
+    <link rel="stylesheet" href="../src/jqScroll.css" />
 </head>
 <body>
     <div class="add_scroll_here">
@@ -35,7 +35,7 @@
         WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </div>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="src/jqScroll.js"></script>
+    <script type="text/javascript" src="../src/jqScroll.js"></script>
     <script type="text/javascript">
         $(".add_scroll_here").jqScroll();
     </script>

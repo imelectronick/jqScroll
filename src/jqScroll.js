@@ -101,11 +101,11 @@
     }
 
     var dragScrollBar = function (wrap, scroller, pane, bar) {
-        is_scrolling = false,
+        var is_scrolling = false,
             origY = origSY = 0;
 
         bar.on('mousedown', function(e) {
-            scroller.addClass('scrolling');
+            wrap.addClass('jqScroll-ing');
             is_scrolling = true;
             origY = e.pageY;
             origSY = parseInt($('>I', bar).css('top'))
@@ -113,7 +113,7 @@
         });
         $(window).on('mouseup', function() {
             is_scrolling = false;
-            scroller.removeClass('scrolling');
+            wrap.removeClass('jqScroll-ing');
         });
         $(window).on('mousemove', function(e) {
             if (is_scrolling) {
@@ -122,7 +122,7 @@
                     a = scroller.height(),
                     b = pane.outerHeight();
 
-                scroller.filter('.scrolling').scrollTop( t*b/a );
+                scroller.scrollTop( t*b/a );
             }
         });
         bar.on('click', function(e){

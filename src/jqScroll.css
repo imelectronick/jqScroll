@@ -1,31 +1,28 @@
 /* jqScroll */
 
 /* active */
-.jqScroll_active {
-    width:100%;
+.jqScroll-active {
     overflow:hidden;zoom:1;
     position:relative;
-    height:100%;
 }
 .jqScroll__i {
     -webkit-overflow-scrolling: touch;
 }
-.jqScroll_active .jqScroll__i {
-    width:100%;
+.jqScroll-active .jqScroll__i {
     overflow-y:scroll;
     padding:0 30px 0 0;
     width:100%;
     position:relative;
     height:100%;
 }
-.jqScroll_active .jqScroll__ii {
+.jqScroll-active .jqScroll__ii {
 }
-.jqScroll_active .jqScroll-bar {
+.jqScroll-active .jqScroll-bar {
     display:block;
 }
 
 /* native */
-.jqScroll_native {
+.jqScroll-native {
     overflow:auto;
 }
 
@@ -39,21 +36,28 @@
     width:5px;
     z-index:6;
     -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;
-    background:#2b1905;
+    background:#eeeeee;
     border-radius:3px;
 }
+
 .jqScroll-bar__bar {
     position:absolute;
     height:100px;
     width:5px;
     -webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;
     cursor:pointer;
-    background:#a75f0f;
+    background:#cfcfcf;
     border-radius:3px;
 }
-.jqScroll-bar__bar:hover {
-    background: #d09b09;
+
+.jqScroll-ing .jqScroll-bar__bar {
+    background: #a0a0a0;
 }
+
+.jqScroll-bar__bar:hover {
+    background: #a0a0a0;
+}
+
 .jqScroll-bar__bar I {
     display:none;
 }
