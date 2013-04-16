@@ -12,6 +12,7 @@
                     $this.html(scroller);
                     var bar = $('<div class="jqScroll-bar"><i class="jqScroll-bar__bar"><i></i></i></div>').appendTo($this);
                     $this.addClass('jqScroll-active');
+                    scroller.css({"padding-right":width+1});
                     scrollInit($this, scroller, pane, bar);
                 } else {
                     $this.addClass('jqScroll-native');
@@ -62,7 +63,7 @@
             updateScrollBar(wrap, scroller, pane, bar);
         });
 
-        pane.on('resize', function(){
+        pane.on('resize DOMSubtreeModified', function(){
             updatePaneWidth(wrap, pane);
             updateScrollBar(wrap, scroller, pane, bar);
         });
@@ -77,7 +78,7 @@
     }
 
     var updatePaneWidth = function (wrap, pane){
-        pane.outerWidth(wrap.outerWidth());
+        //pane.outerWidth(wrap.outerWidth());
     }
 
     var updateScrollBar = function (wrap, scroller, pane, bar) {
